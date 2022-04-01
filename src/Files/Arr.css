@@ -1,0 +1,13 @@
+#hed1{
+    color: rgb(255, 102, 0);
+   margin: 20%;
+    text-align: center;
+    border: 2px solid green;
+    width: 90px;
+    background-color: white;
+    border-radius: 14
+    px;
+}
+body{
+    background-color: aquamarine;
+}
