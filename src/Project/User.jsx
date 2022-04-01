@@ -5,20 +5,13 @@ import TabsListUnstyled from '@mui/base/TabUnstyled';
 import TabUnstyled from '@mui/base/TabUnstyled';
 import TabPanelUnstyled from '@mui/base/TabPanelUnstyled';
 import ButtonAppBar from "./Nav";
-
+import {useNavigate} from 'react-router-dom';
 const User=()=>{
+  const navigate=useNavigate();
   const [value,setvalue]=useState()
   const handleChange=(event,newValue)=>{
     setvalue(newValue);
   }
-    const lin=()=>{
-      return(
-        <>
-       
-        <a href="ocalhost:3000/loginform"></a>
-        </>
-      )
-    }
     return(
 
         <>
@@ -33,8 +26,12 @@ const User=()=>{
            onChange={handleChange} 
            aria-label="Disable tab ex">
             
-            <Button href="http://localhost:3000/loginform"><Tab label="login" ></Tab></Button>
-           <Button href="http://localhost:3000/usersignup"><Tab label="sign up"></Tab></Button>
+            <Button 
+            onClick={()=>{navigate('/loginform')}}
+             ><Tab label="login" ></Tab></Button>
+           <Button
+           onClick={()=>{navigate('/usersignup')}}
+            ><Tab label="sign up"></Tab></Button>
           </Tabs>
         </Paper>
         </div>

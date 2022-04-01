@@ -2,11 +2,15 @@ import React from "react";
 import { useState } from "react";
 import {Paper,Tabs,Tab,Button} from '@mui/material';
 import ButtonAppBar from "./Nav";
+import {useNavigate} from 'react-router-dom';
+
 const CompanyUser=()=>{
     const [value,setvalue]=useState()
   const handleChange=(event,newValue)=>{
     setvalue(newValue);
   }
+
+  const navigate= useNavigate();
     return(
         <>
         <ButtonAppBar/>
@@ -20,8 +24,12 @@ const CompanyUser=()=>{
            onChange={handleChange} 
            aria-label="Disable tab ex">
             
-            <Button href="http://localhost:3000/companylogin" ><Tab label="login"></Tab></Button>
-           <Button href="http://localhost:3000/companysignup"><Tab label="sign up"></Tab></Button>
+            <Button 
+            onClick={()=>{navigate('/companylogin')}}
+            ><Tab label="login"></Tab></Button>
+           <Button 
+           onClick={()=>{navigate('/companysignup')}}
+           ><Tab label="sign up"></Tab></Button>
           </Tabs>
         </Paper>
         </div>

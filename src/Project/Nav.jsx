@@ -8,12 +8,12 @@ import Option from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Select from '@mui/material/Select';
-import { BrowserRouter, Routes, Route,Switch,Router } from "react-router-dom";
+import { BrowserRouter, Routes, Route,Switch,Router,useNavigate } from "react-router-dom";
 import User from './User';
 
 
 export default function ButtonAppBar() {
-  
+  const navigate= useNavigate();
   const hello =()=>{
    return(
 
@@ -44,13 +44,10 @@ export default function ButtonAppBar() {
           </Typography>
         
          
-         <Button variant='contained'  href='http://localhost:3000/login' >Login</Button>
+         <Button variant='contained' 
+         onClick={()=>{navigate('/login')}}
+          >Login</Button>
           
-
-
-          
-        
-         
           
            
         </Toolbar>

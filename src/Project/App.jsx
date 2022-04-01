@@ -28,12 +28,12 @@ function App() {
     <Route exact path='/company' element={<Company/>}></Route>
     <Route path='/user' element={<User/>}></Route>
     <Route path='/about' element={<About/>}></Route>
-    <Route path='login' element={<Login/>}></Route>
+    <Route path='/login' element={<Login/>}></Route>
     <Route path='/CompanyUser' element={<CompanyUser></CompanyUser>}></Route>
-    <Route path='loginform' element={<LoginForm></LoginForm>}></Route>
-    <Route path='usersignup' element={<Usersignup></Usersignup>}></Route>
-    <Route path="companylogin" element={<CompanyLogin></CompanyLogin>}></Route>
-    <Route path='companysignup' element={<CompanySignUp></CompanySignUp>}></Route>
+    <Route path='/loginform' element={<LoginForm></LoginForm>}></Route>
+    <Route path='/usersignup' element={<Usersignup></Usersignup>}></Route>
+    <Route path="/companylogin" element={<CompanyLogin></CompanyLogin>}></Route>
+    <Route path='/companysignup' element={<CompanySignUp></CompanySignUp>}></Route>
     <Route exact path='/userhomepage' element={<UserHomePage/>}></Route>
     <Route exact path='/company-home' element={<CompanyHomePage/>}></Route>
 
